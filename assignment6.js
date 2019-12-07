@@ -106,23 +106,24 @@ Minecraft.checkMatch = function (selectedCell) {
     if (Minecraft.replace === false) {
         let cellClass = selectedCell.attr('class').replace(" box", "");
         let inventoryName = "Minecraft.inventory." + cellClass;
-        if (inventoryName === "Minecraft.inventory.dirt") {
+        let selectedTool = $('.toolSelected')
+        if (inventoryName === "Minecraft.inventory.dirt" && selectedTool.attr('data') === 'shovel') {
             Minecraft.inventory.dirt += 1;
             Minecraft.updateInventory();
         }
-        else if (inventoryName === "Minecraft.inventory.grass") {
+        else if (inventoryName === "Minecraft.inventory.grass" && selectedTool.attr('data') === 'shovel') {
             Minecraft.inventory.grass += 1;
             Minecraft.updateInventory();
         }
-        else if (inventoryName === "Minecraft.inventory.leaf") {
+        else if (inventoryName === "Minecraft.inventory.leaf" && selectedTool.attr('data') === 'axe') {
             Minecraft.inventory.leaf += 1;
             Minecraft.updateInventory();
         }
-        else if (inventoryName === "Minecraft.inventory.rock") {
+        else if (inventoryName === "Minecraft.inventory.rock" && selectedTool.attr('data') === 'pickaxe') {
             Minecraft.inventory.rock += 1;
             Minecraft.updateInventory();
         }
-        else if (inventoryName === "Minecraft.inventory.tree") {
+        else if (inventoryName === "Minecraft.inventory.tree" && selectedTool.attr('data') === 'axe') {
             Minecraft.inventory.tree += 1;
             Minecraft.updateInventory();
         }
@@ -134,7 +135,7 @@ Minecraft.checkMatch = function (selectedCell) {
             Minecraft.incompatible();
         }
     }
-};
+}
 
 Minecraft.incompatible = function () {
     $('toolSelected').addClass('incorrect');
