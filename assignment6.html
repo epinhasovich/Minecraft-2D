@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./assignment6.css">
+
+    <title>⛏️MINECRAFT 2D⛏️</title>
+
+</head>
+
+<body>
+    <div id="MainModal">
+        <div id="logo" click="StartGame()" >
+            <img src="./images/MineCraft.png">
+        </div>
+        <div id="btn-tutorial" click="OpenTutorial();"></div>
+        <div id="btn-start" click="StartGame();"></div>
+    </div>
+
+    <div id="TutoModal">
+        <div class="rules">
+            <h1>TUTORIAL</h1>
+            <p> <strong>
+                    YOU MINE ROCKS WITH THE PICKAXE, </br>
+                    YOU DIG DIRT AND GRASS WITH THE SHOVEL, </br>
+                    YOU CUT TREES AND LEAVES WITH THE AXE, </br>
+                    AND USE THE INVENTORY YOU HAVE GATHERED TO... </br>CREATE YOUR OWN WORLD!!!</strong></p>
+        </div>
+        <div id="btn-start2" click="CloseTutorial();"></div>
+
+    </div>
+    <div id="container">
+        <div id="toolsContain">
+            <div class="toolItem"></div>
+            <div class="toolItem"></div>
+            <div class="toolItem"></div>
+            <div class="inventory dirt"><span id="dirtInventory"></span></div>
+            <div class="inventory grass"><span id="grassInventory"></span></div>
+            <div class="inventory leaf"><span id="leafInventory"></span></div>
+            <div class="inventory tree"><span id="treeInventory"></span></div>
+            <div class="inventory rock"><span id="rockInventory"></span></div>
+        </div>
+        <div id="board">
+            <div id="main"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assignment6.js"></script>
+
+</body>
+
+</html>

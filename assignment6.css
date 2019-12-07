@@ -1,0 +1,339 @@
+body {
+    width: 100vw;
+    height: 98vh;
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+  }
+  
+  #main {
+    width: calc(100vw - 150px);
+    height: 100vh;
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(20, auto);
+    grid-gap: 0px;
+    margin: auto 0 auto 150px;
+  }
+  
+  .sky {
+    background-color: lightskyblue;
+  }
+  
+  .cloud {
+    background-color: white;
+  }
+  
+  .dirt {
+    background-image: url(./images/dirt.png);
+  }
+  
+  .grass {
+    background-image: url(./images/grass.png);
+  }
+  
+  .rock {
+    background-image: url(./images/rock.png);
+  }
+  
+  .tree {
+    background-image: url(./images/tree.png);
+  }
+  
+  .leaf {
+    background-image: url(./images/leaf.png);
+  }
+  
+  .box {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    box-sizing: border-box;
+  }
+  
+  #toolsContain {
+    background-color: gray;
+    position: absolute;
+    width: 150px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: inset 0px 0px 0px 10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 0px 10px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 0px 10px rgba(0, 0, 0, 0.75);
+    justify-content: space-evenly;
+  }
+  
+  .toolItem {
+    border: 5px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .toolItem img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .toolSelected {
+    background-color: blue;
+  }
+  
+  .inventory {
+    border: 5px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+  }
+  
+  #container {
+    display: none;
+  }
+  
+  #MainModal {
+    background-image: url("./images/background-empty.jpg");
+    background-repeat: round;
+    background-size: contain;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    border: 0;
+  }
+  
+  #btn-tutorial {
+    background-image: url("./images/tutorialbutton.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15%;
+    width: 15%;
+    z-index: 10;
+    position: absolute;
+    bottom: 15vh;
+    right: 15vw;
+  }
+  
+  #btn-start {
+    background-image: url("./images/start.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15%;
+    width: 15%;
+    z-index: 10;
+    position: absolute;
+    bottom: 15vh;
+    left: 15vw;
+  }
+  
+  .rules {
+    width: 100vw;
+    position: absolute;
+    font-size: 30;
+    color: white;
+    bottom: 40%;
+    line-height: 150%;
+    text-align: center;
+    text-shadow: black 2px;
+  }
+  
+  .rules h1 {
+    font-family: fantasy;
+  }
+  
+  span {
+    font-size: 4vh;
+    font-weight: bold;
+    text-align: center;
+    margin-left: .5vw;
+    color:white;
+  }
+  
+  
+  #TutoModal {
+    background-image: url("./images/background-empty.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    display: none;
+    margin: 0;
+    border: 0;
+  }
+  
+  #btn-start2 {
+    background-image: url("./images/start.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 15%;
+    width: 15%;
+    z-index: 100;
+    position: absolute;
+    bottom: 15vh;
+    left: 42.5vw;
+  }
+  
+  #logo img{
+    display: flex;
+    max-height: 25vh;
+    width: 50vw;
+    margin-top: 15vh;
+  }
+  @media only screen and (max-width:1450px){
+    #MainModal {
+      background-image: url("./images/background-empty.jpg");
+      background-repeat: round;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 0;
+      border: 0;
+    }
+  
+  }
+  @media only screen and (max-width: 1050px) {
+    #logo img{
+      display: flex;
+      width: 50vw;
+      margin-top: 10vh;
+  
+  }
+  
+  @media only screen and (max-width: 900px) {
+    #toolsContain {
+      width: 100px;
+      -webkit-box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.75);
+      box-shadow: inset 0px 0px 0px 5px rgba(0, 0, 0, 0.75);
+    }
+  
+    #main {
+      width: calc(100vw - 100px);
+      margin-left: 100px;
+    }
+  
+    #MainModal {
+      background-image: url("./images/background-empty.jpg");
+      background-repeat: round;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 0;
+      border: 0;
+    }
+  
+    #logo img{
+      max-height: 30vh;
+      
+      width:50vw;
+      margin-top: 15vh;
+    }
+    
+    #btn-tutorial {
+      height: 25%;
+      width: 25%;
+      bottom: 15vh;
+      right: 10vw;
+    }
+    
+    #btn-start {
+      height: 25%;
+      width: 25%;
+      bottom: 15vh;
+      left: 10vw;
+    }
+  
+    #btn-start2 {
+      height: 30%;
+      width: 30%;
+      bottom: 5vh;
+      left : 35%;
+    }
+  
+    .rules {
+      width: 100vw;
+      position: absolute;
+      font-size: 25;
+      color: white;
+      bottom: 40%;
+      line-height: 150%;
+      text-align: center;
+      text-shadow: black 2px;
+    }
+  }
+  
+  @media only screen and (max-width: 750px){
+    #logo img{
+      max-height: 30vh;
+      height: 15vh;
+      width:auto;
+      margin-top: 15vh;
+    }
+  
+    #btn-start2 {
+      height: 30%;
+      width: 30%;
+      bottom: 5vh;
+      left : 35%;
+    }
+  
+  }
+  
+  
+  @media only screen and (max-width: 600px) {
+    #toolsContain {
+      width: 50px;
+      -webkit-box-shadow: inset 0px 0px 0px 3px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: inset 0px 0px 0px 3px rgba(0, 0, 0, 0.75);
+      box-shadow: inset 0px 0px 0px 3px rgba(0, 0, 0, 0.75);
+    }
+    #main {
+      width: calc(100vw - 50px);
+      margin-left: 50px;
+    }
+    .toolItem {
+      border: 1px solid black;
+      height: 30px;
+      width: 30px;
+    }
+    .toolItem img {
+      width: 30px;
+      height: 30px;
+    }
+    .inventory {
+      border: 1px solid black;
+      height: 30px;
+      width: 30px;
+    }
+  
+    #MainModal {
+      background-image: url("./images/background-empty.jpg");
+      background-repeat: round;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 0;
+      border: 0;
+    }
+  
+    #logo img{
+      display: flex;
+      max-height: 25vh;
+      width: 80vw;
+      margin-top: 25vh;
+  }
